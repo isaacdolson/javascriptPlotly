@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Diversity</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      background-color: unset;
+    }
+/* table {
+    border-collapse: collapse;
+    width: 100%;
+} */
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tbody>tr:nth-child(even){background-color: #f2f2f2 !important}
+tbody>tr:nth-child(odd){background-color: #fff !important}
+/* th {
+  background-color: #2f3439;
+  color: white;
+} */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">
+        Belly Button Biodiversity       
+        <!-- <span id="report-date" style="float: right;">2019</span> -->
+      </h1>
+      <h1 class="text-center">DashBoard</h1>
+      <p class="text-center">Use interactive charts below to explore the dataset</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-primary">
+          <div class="panel-body">
+              Test subject ID No.
+            <br/>
+            <select id="selDataset">
+            </select>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-body demo-info">
+                Demographic Info
+            </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div id = "barPlot">
+            
+          </div>
+        </div>
+        <div id="plot"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubblePlot"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src='data.js'></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
